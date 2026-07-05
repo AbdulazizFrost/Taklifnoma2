@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sardorbek & Zilola — To'y Taklifnomasi</title>
+    
+    <!-- SEO and Meta Tags -->
+    <meta name="description" content="Sardorbek va Zilola nikoh oqshomi to'y taklifnomasi. Sizni baxtli kunimizda kutib qolamiz.">
+    <meta name="keywords" content="Sardorbek, Zilola, to'y, taklifnoma, to'yona, nikoh oqshomi">
+    <meta property="og:title" content="Sardorbek & Zilola — To'y Taklifnomasi">
+    <meta property="og:description" content="Hayotimizning eng go'zal sahifasi boshlanmoqda. Sizni orziqib kutib qolamiz.">
+    <meta property="og:image" content="images/bosh_rasm.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SVG Definitions for Reusable Gradients & Elements -->
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+        <defs>
+            <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#B48737" />
+                <stop offset="30%" stop-color="#FFF5D8" />
+                <stop offset="50%" stop-color="#EAD7A4" />
+                <stop offset="80%" stop-color="#C7A86B" />
+                <stop offset="100%" stop-color="#B48737" />
+            </linearGradient>
+            
+            <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Background music player -->
+    <audio id="weddingAudio" src="Alex Warren - Ordinary (Official Video).mp3" loop></audio>
+    
+    <!-- Music Control Button -->
+    <button class="music-toggle-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Musiqani yoqish yoki o'chirish">
+        <svg class="icon-play" viewBox="0 0 24 24" id="musicIconPlay" style="display: none;" aria-hidden="true">
+            <path d='M8 5v14l11-7z' fill="#b48737"/>
+        </svg>
+        <svg class="icon-pause" viewBox="0 0 24 24" id="musicIconPause" aria-hidden="true">
+            <path d='M6 19h4V5H6v14zm8-14v14h4V5h-4z' fill="#b48737"/>
+        </svg>
+        <div class="music-pulse" aria-hidden="true"></div>
+    </button>
+
+    <!-- Glitter/Flower Particle Canvas Container -->
+    <div class="particles-container" id="particles" aria-hidden="true"></div>
+
+    <!-- Entrance Overlay Screen -->
+    <div class="intro-overlay" id="introOverlay">
+        <div class="cloud-layer cloud-bg-1" aria-hidden="true"></div>
+        <div class="cloud-layer cloud-bg-2" aria-hidden="true"></div>
+        <div class="cloud-layer cloud-bg-3" aria-hidden="true"></div>
+
+        <div class="intro-content">
+            <!-- Ornate Top Decoration -->
+            <div class="ornament-top" aria-hidden="true">
+                <svg viewBox="0 0 100 30" width="120" height="36" fill="none">
+                    <path d="M10,25 Q50,0 90,25" stroke="url(#gold-grad)" stroke-width="1.5" />
+                    <circle cx="50" cy="12" r="3" fill="url(#gold-grad)" />
+                    <path d="M47,12 L50,9 L53,12 L50,15 Z" fill="url(#gold-grad)" />
+                </svg>
+            </div>
+            
+            <div class="luxury-crest-wrapper">
+                <div class="luxury-monogram-intro">SZ</div>
+            </div>
+            
+            <h1 class="intro-names">Sardorbek & Zilola</h1>
+            <p class="intro-subtitle">Hayotimizning eng go'zal sahifasi boshlanmoqda</p>
+            
+            <!-- Interlocking rings decoration -->
+            <div class="intro-rings-wrapper" aria-hidden="true">
+                <svg class="rings-svg" viewBox="0 0 100 60" width="90" height="54">
+                    <circle cx="38" cy="30" r="18" fill="none" stroke="url(#gold-grad)" stroke-width="2.5" />
+                    <circle cx="62" cy="30" r="18" fill="none" stroke="url(#gold-grad)" stroke-width="2.5" />
+                </svg>
+            </div>
+            
+            <button class="open-invite-btn" onclick="revealInvitation()">
+                <span>Taklifnomani Ochish</span>
+                <div class="btn-glow" aria-hidden="true"></div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Webpage Content -->
+    <main class="app-container" id="mainContent">
+
+        <!-- Hero Section -->
+        <section id="hero" class="card-hero reveal-item">
+            <header class="card-header">
+                <!-- SVG Crown Ornament above Monogram -->
+                <div class="luxury-crown" aria-hidden="true">
+                    <svg viewBox="0 0 100 40" width="60" height="24" fill="none">
+                        <path d="M20,30 L35,15 L50,5 L65,15 L80,30 Z" stroke="url(#gold-grad)" stroke-width="1.5" />
+                        <circle cx="50" cy="5" r="3" fill="url(#gold-grad)" />
+                        <circle cx="35" cy="15" r="2" fill="url(#gold-grad)" />
+                        <circle cx="65" cy="15" r="2" fill="url(#gold-grad)" />
+                    </svg>
+                </div>
+                
+                <div class="luxury-crest-wrapper small">
+                    <div class="gold-monogram">SZ</div>
+                </div>
+                <h2 class="serif-title font-accent-names">Sardorbek & Zilola</h2>
+            </header>
+
+            <!-- Premium Image Frame with Semantic Img -->
+            <div class="premium-image-frame">
+                <div class="image-inner-shadow" aria-hidden="true"></div>
+                <img src="images/bosh_rasm.jpg" alt="Sardorbek va Zilola bosh rasmi" class="photo-placeholder" fetchpriority="high">
+            </div>
+
+            <!-- SVG Elegant Scroll Down Indicator -->
+            <div class="scroll-down-notice">
+                <span>Pastga suring</span>
+                <div class="chevron-down" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <!-- Wedding Invitations Text -->
+        <section id="invitation" class="card-body-text reveal-item">
+            <div class="corner-flower top-left" aria-hidden="true">🌿</div>
+            <div class="corner-flower top-right" aria-hidden="true">🌿</div>
+            
+            <p class="date-badge">23.08 — BIZNING KUNIMIZ 💍</p>
+            
+            <blockquote class="ayat">
+                «Alloh ularning qalblarini sevgi ila birlashtirdi»<br>
+                <span>Anfol surasi, 63-oyat</span>
+            </blockquote>
+            
+            <p class="main-invite-message">
+                Ota-onalarimizning duosi bilan sizni nikoh oqshomimizning unutilmas lahzalariga guvoh bo‘lishga taklif qilamiz.
+            </p>
+
+            <!-- SVG Ornate Line Divider -->
+            <div class="elegant-divider" aria-hidden="true">
+                <svg viewBox="0 0 200 20" width="120" height="15" fill="none">
+                    <path d="M10,10 H90 L100,3 L110,10 H190" stroke="url(#gold-grad)" stroke-width="1.5" />
+                    <circle cx="100" cy="10" r="3" fill="url(#gold-grad)" />
+                </svg>
+            </div>
+
+            <h3 class="big-date-display">23/08/2026</h3>
+            <p class="location-sub-text">Toshkent shahri</p>
+            <p class="city-title-serif">Baxt Oqshomi</p>
+
+            <div class="elegant-divider small" aria-hidden="true">
+                <svg viewBox="0 0 100 20" width="60" height="12" fill="none">
+                    <path d="M10,10 H45 L50,5 L55,10 H90" stroke="url(#gold-grad)" stroke-width="1.5" />
+                    <circle cx="50" cy="10" r="2.5" fill="url(#gold-grad)" />
+                </svg>
+            </div>
+            
+            <p class="names-footer-span">SARDORBEK & ZILOLA</p>
+        </section>
+
+        <!-- Our Story Section -->
+        <section id="story" class="love-story-section reveal-item">
+            <span class="section-tag">Nafis Muhabbat Tarixi</span>
+            <h3 class="serif-section-title">Bizning Hikoya</h3>
+            <p class="story-paragraph">
+                Ikki qalbning bir butunlikka aylanishi, tasodifiy nigohlardan boshlangan cheksiz muhabbat dostoni. Biz
+                baxtli kelajagimiz sari ilk qadamni tashlamoqdamiz va ushbu sehrli lahzalarda sizni yonimizda ko'rishdan
+                mamnun bo'lamiz.
+            </p>
+            
+            <!-- Floating Dove SVG Decor -->
+            <div class="dove-decor" aria-hidden="true">
+                <svg viewBox="0 0 100 100" width="60" height="60">
+                    <path d="M50,15 C45,25 35,30 20,35 C35,40 45,45 50,55 C55,45 65,40 80,35 C65,30 55,25 50,15 Z" fill="url(#gold-grad)" opacity="0.3" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section id="gallery" class="gallery-section reveal-item">
+            <span class="section-tag">Baxtli Damlarimiz</span>
+            <h3 class="serif-section-title">Galereya</h3>
+            
+            <div class="editorial-gallery-grid">
+                <div class="gallery-item large-frame">
+                    <img src="images/galereya1.jpg" alt="Sardorbek va Zilola to'y foto galereyasi 1" class="glass-photo-cover" loading="lazy">
+                </div>
+                <div class="gallery-item portrait-frame">
+                    <img src="images/galereya2.jpg" alt="Sardorbek va Zilola to'y foto galereyasi 2" class="glass-photo-cover" loading="lazy">
+                </div>
+                <div class="gallery-item square-frame">
+                    <img src="images/galereya3.jpg" alt="Sardorbek va Zilola to'y foto galereyasi 3" class="glass-photo-cover" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Venue Location Info Section -->
+        <section id="event" class="event-info-section reveal-item">
+            <div class="info-architecture-card">
+                <div class="building-icon-luxury" aria-hidden="true">
+                    <!-- SVG Palace icon instead of Emoji -->
+                    <svg viewBox="0 0 100 100" width="40" height="40" fill="none">
+                        <path d="M10,80 L10,50 L50,20 L90,50 L90,80 Z" stroke="white" stroke-width="4" stroke-linejoin="round" />
+                        <path d="M50,20 L50,80 M10,50 L90,50 M30,80 L30,50 M70,80 L70,50" stroke="white" stroke-width="4" />
+                        <path d="M40,80 L40,65 Q50,55 60,65 L60,80 Z" fill="white" />
+                    </svg>
+                </div>
+                <h2 class="time-display">19:00</h2>
+                <p class="schedule-title">Mehmonlar yig'ilishi</p>
+                <p class="venue-name">"Samara" To'yxonasi</p>
+                <p class="venue-city">Toshkent shahri</p>
+                
+                <a href="https://maps.google.com" target="_blank" class="luxury-action-btn" rel="noopener">
+                    <span>Lokatsiyaga kirish</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Countdown Timer Section -->
+        <section id="timer" class="countdown-section reveal-item">
+            <h3 class="serif-section-title">Tantanagacha Qoldi</h3>
+            
+            <div class="timer-grid">
+                <div class="timer-block" role="timer">
+                    <span class="timer-num" id="days">00</span>
+                    <span class="timer-label">Kun</span>
+                </div>
+                <div class="timer-block" role="timer">
+                    <span class="timer-num" id="hours">00</span>
+                    <span class="timer-label">Soat</span>
+                </div>
+                <div class="timer-block" role="timer">
+                    <span class="timer-num" id="minutes">00</span>
+                    <span class="timer-label">Daqiqa</span>
+                </div>
+                <div class="timer-block" role="timer">
+                    <span class="timer-num" id="seconds">00</span>
+                    <span class="timer-label">Soniya</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wedding Gifts / Toyona Card Section -->
+        <section id="gifts" class="toyona-section reveal-item">
+            <div class="toyona-card">
+                <!-- SVG Gift ribbon layout top -->
+                <div class="gift-ribbon" aria-hidden="true">
+                    <svg viewBox="0 0 100 40" width="80" height="32" fill="none">
+                        <path d="M10,20 Q50,0 90,20 Q50,40 10,20 Z" fill="url(#gold-grad)" opacity="0.15" />
+                        <path d="M50,5 L50,35 M20,20 L80,20" stroke="url(#gold-grad)" stroke-width="2" />
+                    </svg>
+                </div>
+                
+                <h3 class="toyona-title">To'yona</h3>
+                <p class="toyona-description">
+                    Agar bizni tabriklab, to'yona yubormoqchi bo'lsangiz, quyidagi karta raqamidan foydalanishingiz mumkin.
+                </p>
+                
+                <div class="card-details-box">
+                    <p class="card-holder-label">KARTA EGASI</p>
+                    <p class="card-holder-name">Sardorbek</p>
+                    
+                    <p class="card-bank-label">BANK</p>
+                    <p class="card-bank-name">Uzcard</p>
+                    
+                    <p class="card-number-label">KARTA RAQAMI</p>
+                    <p class="card-number-digits" id="cardNumber">1234 5678 9876 5432</p>
+                    
+                    <button class="copy-card-btn" onclick="copyCardNumber()">
+                        <span id="copyBtnText">Nusxalash</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Form Section -->
+        <section id="rsvp" class="rsvp-section reveal-item">
+            <div class="rsvp-wrapper">
+                <h3 class="serif-section-title">Tashrifni tasdiqlash</h3>
+                <p class="rsvp-subtitle">Sizning ishtirokingiz biz uchun juda muhim</p>
+
+                <form id="rsvpForm" action="https://formsubmit.co/your-email@domain.com" method="POST" onsubmit="handleRSVP(event)">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="form-group">
+                        <label for="name">Ismingiz</label>
+                        <input type="text" id="name" name="Name" required placeholder="Masalan: Abdulaziz" autocomplete="name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefon raqam</label>
+                        <input type="tel" id="phone" name="Phone" required placeholder="+998 90 123 45 67" autocomplete="tel">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tilaklar (Ixtiyoriy)</label>
+                        <textarea id="message" name="Message" rows="3" placeholder="O'z tilaklaringizni yozishingiz mumkin..."></textarea>
+                    </div>
+
+                    <input type="hidden" id="attendanceStatus" name="Attendance" value="Albatta Boraman">
+
+                    <div class="rsvp-buttons-row">
+                        <button type="submit" class="rsvp-btn accept" onclick="setStatus('Albatta Boraman')">
+                            <span>Men Albatta Boraman</span>
+                        </button>
+                        <button type="submit" class="rsvp-btn decline" onclick="setStatus('Afsuski Kela olmayman')">
+                            <span>Afsuski Kela olmayman</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="luxury-footer reveal-item">
+            <div class="gold-divider-line" aria-hidden="true"></div>
+            <h2 class="footer-names">Sardorbek & Zilola</h2>
+            <p class="with-love-tag">Cheksiz muhabbat ila</p>
+        </footer>
+
+    </main>
+
+    <!-- Success Modal Popup -->
+    <div class="success-modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-box">
+            <!-- Glowing SVG Checkmark/Sparkle -->
+            <div class="modal-checkmark" aria-hidden="true">
+                <svg viewBox="0 0 100 100" width="80" height="80">
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="url(#gold-grad)" stroke-width="4" />
+                    <path d="M30,50 L45,65 L70,35" fill="none" stroke="url(#gold-grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            
+            <h3 id="modalTitle">Rahmat!</h3>
+            <p id="modalMessage">Sizning javobingiz muvaffaqiyatli qabul qilindi.</p>
+            <button class="close-modal-btn" onclick="closeModal()">Yopish</button>
+        </div>
+    </div>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
