@@ -21,6 +21,7 @@ function revealInvitation() {
         initParticles();
         initCountdown();
         initMagneticButtons();
+        initMapLink();
 
         musicBtn.classList.add('visible');
         startMusic();
@@ -166,6 +167,23 @@ function initMagneticButtons() {
             button.style.setProperty('--y', `${y}px`);
         });
     });
+}
+
+// 6.5. DYNAMIC MAP LINKS FOR DEVICES (Qurilmalarga mos ravishda xarita havolasini sozlash)
+function initMapLink() {
+    const mapLink = document.getElementById('mapLink');
+    if (!mapLink) return;
+
+    // Detect iPhone / iPad / iOS device
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isIOS) {
+        // Apple Maps link for iOS
+        mapLink.href = "https://maps.apple.com/place?coordinate=41.368279,69.304101&name=%D0%9E%D1%82%D0%BC%D0%B5%D1%87%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B3%D0%B5%D0%BE%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D1%8F&map=h";
+    } else {
+        // Google Maps link for Android and other platforms
+        mapLink.href = "https://www.google.com/maps/place/%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0/@41.3682407,69.3041796,846m/data=!3m2!1e3!4b1!4m6!3m5!1s0x38aef34741c4e1bf:0xf26727bb74444f7b!8m2!3d41.3682407!4d69.3041796!16s%2Fg%2F1tdmywy9?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D";
+    }
 }
 
 // 7. KARTA RAQAMINI NUSXALASH
